@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="BaiTap1" />
         <module name="SingletonDesignPattern" />
+        <module name="BaiTap2" />
       </profile>
     </annotationProcessing>
   </component>

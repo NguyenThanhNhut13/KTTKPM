@@ -6,6 +6,8 @@
       <list>
         <option value="$PROJECT_DIR$/SingletonDesignPattern/pom.xml" />
         <option value="$PROJECT_DIR$/BaiTap1_StatePattern/pom.xml" />
+        <option value="$PROJECT_DIR$/BaiTap1/pom.xml" />
+        <option value="$PROJECT_DIR$/BaiTap2/pom.xml" />
       </list>
     </option>
   </component>

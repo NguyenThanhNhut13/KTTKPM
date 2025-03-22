@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ObserverPattern/ObserverPattern.iml" filepath="$PROJECT_DIR$/ObserverPattern/ObserverPattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StockMarket/StockMarket.iml" filepath="$PROJECT_DIR$/StockMarket/StockMarket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task/Task.iml" filepath="$PROJECT_DIR$/Task/Task.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Tuan5.iml" filepath="$PROJECT_DIR$/.idea/Tuan5.iml" />
     </modules>
   </component>

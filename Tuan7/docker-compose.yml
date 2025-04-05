@@ -1,0 +1,9 @@
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+  
+  app:
+    image: node:18
+    command: sh -c "while true; do echo Hello from Node.js app 21140001 - Nguyễn Thanh Nhứt; sleep 3; done"

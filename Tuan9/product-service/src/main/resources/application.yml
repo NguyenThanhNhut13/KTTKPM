@@ -1,0 +1,55 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 8060
+spring:
+  application:
+    name: product-service
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: "jdbc:mariadb://localhost:3306/product?createDatabaseIfNotExist=true"
+    username: root
+    password: sapassword
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,circuitbreakers
+  endpoint:
+    health:
+      show-details: always
+  health:
+    circuitbreakers:
+      enabled: true
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      databaseService:
+        registerHealthIndicator: true
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5s
+        recordExceptions:
+          - org.springframework.dao.DataAccessException
+          - java.sql.SQLException
+
+  timelimiter:
+    instances:
+      databaseService:
+        timeoutDuration: 2s
+        cancelRunningFuture: true
